@@ -48,6 +48,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Operator overloading](#operator-overloading)
   - [Variable number of arguments (varargs)](#varargs)
   - [Infix notation](#infix-notation)
+  - [Vararg Parameters](#vararg-parameters)
   - [Scope Functions](#scope-functions)
 - [Collections](#collections)  
   - [Array](#array)
@@ -771,6 +772,33 @@ fun main() {
 infix fun Int.plus(that: Int) = this + that
 
 1 plus 1 //Outputs 2
+
+```
+
+### Vararg Parameters <a name="vararg-parameters"></a>
+
+Key points:
+- Declare function parameters with the vararg keyword
+- When arrays are passed in, handle them with the * character
+- Note: “In Kotlin, a vararg parameter of type T is internally represented as an array of type T (Array<T>) inside the function body.”
+
+```kotlin
+fun printAll(vararg ints: Int) {
+    for (i in ints) print(i)
+}
+
+printAll(1,2,3) //Prints 1 2 3
+```
+
+Passing in an array:
+
+```kotlin
+val arr = intArrayOf(1,2,3)
+
+printAll(arr)
+//error: type mismatch: inferred type is Array<Int> but Int was expected printAll(arr)
+
+printAll(*arr) //works
 
 ```
 
