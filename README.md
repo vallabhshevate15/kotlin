@@ -382,6 +382,9 @@ val max = if (a > b) a else b
 for (item in collection) {
     // Code to execute for each item in collection
 }
+
+//For maps:
+for ((name,rating) in ratings) println("Movie: $name, Rating: $rating")
 ```
 
 ### Ranges <a name="ranges"></a>
