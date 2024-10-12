@@ -588,6 +588,9 @@ fun add(a: Int, b: Int): Int {
 }
 
 fun multiply(a: Int, b: Int) = a * b
+
+fun plus1(i: Int): Int = i + 1
+
 ```
 
 Unit-returning functions
