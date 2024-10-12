@@ -417,6 +417,17 @@ when (x) {
 }
 ```
 
+This syntax is useful for using when as the body of a function:
+
+
+```kotlin
+fun intToString(i: Int): String = when {
+    i < 0  -> "a negative number!"
+    i == 0 -> "0"
+    else   -> "a positive number!"
+}
+```
+
 Thus, it allows a similar ternary operator using a regular if.
 
 ```kotlin
