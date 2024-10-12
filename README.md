@@ -409,7 +409,10 @@ outer@ while(condition) {
       inner@ while(condition) {
             // code
             if(break condition) {
-               break@outer //'break @outer' is also allowed. Similarly with 'continue'
+               break@outer //'break @outer' is also allowed i.e. with a space
+            } 
+            if(continue condition) {
+               continue@outer //'continue @outer' is also allowed i.e. with a space
             } 
       }
 }
