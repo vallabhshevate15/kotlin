@@ -1341,6 +1341,12 @@ Kotlin has null safety, which helps prevent null pointer exceptions. Kotlin prov
     // this would not compile because nonNullStr is not nullable
     // nonNullStr = null
 
+    val name: String? = null
+    //name might be changed later ...
+
+    name?.let { println("The name is $it") }
+    //If name is null you won’t see any output;
+
 ```  
 ### Equality <a name="equality"></a>
 
