@@ -44,7 +44,6 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Generic functions](#generic-functions)
   - [Lambda Expressions](#lambda-expressions)
   - [Extension Functions and Properties](#extension-functions-and-Properties)
-  - [Infix functions](#infix-functions)
   - [Higher-Order Functions](#higher-order-functions)
   - [Operator overloading](#operator-overloading)
   - [Variable number of arguments (varargs)](#varargs)
@@ -680,14 +679,6 @@ fun Any.printMe(): Unit = println("I am ${this}")
 true.printMe()
 ```
 
-### Infix functions <a name="infix-functions"></a>
-
-```kotlin
-infix fun Int.plus(that: Int) = this + that
-
-1 plus 1 //Outputs 2
-```
-
 ### Higher-Order Functions <a name="higher-order-functions"></a>
 
 A higher-order function is a function that takes another function as parameter and/or returns a function.
@@ -776,6 +767,11 @@ fun main() {
     val str = 5 times "Hello "
     println(str) // Output: "Hello Hello Hello Hello Hello "
 }
+
+infix fun Int.plus(that: Int) = this + that
+
+1 plus 1 //Outputs 2
+
 ```
 
 ### Scope Functions <a name="scope-functions"></a>
