@@ -20,6 +20,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Type Inference](#type-inference)
   - [Type Conversion](#type-conversion)
   - [String templates](#string-templates)
+  - [Multiline strings](#multiline-strings)
   - [Character escape](#character-escape)
   - [Operators](#operators)
 - [Control Flow](#control-flow)
@@ -229,6 +230,14 @@ Kotlin provides several methods for converting between data types. Here's an exa
 ```kotlin
 val name= "Ali"
 val result= "My name is $name" 
+```
+
+### Multiline strings <a name="multiline-strings"></a>
+
+```kotlin
+val speech = """Four score and
+               |seven years ago
+               |our fathers ...""".trimMargin()
 ```
 
 ### Character escape <a name="character-escape"></a>
