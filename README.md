@@ -30,6 +30,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [While](#while)
   - [Do while](#do-while)
   - [Break and Continue](#break-and-continue)
+  - [Labelled Break And Continue](#labelled-break-and-continue)
   - [Exceptions](#exceptions)
 - [Functions](#functions)
   - [Function Declaration](#function-declaration)
@@ -317,10 +318,10 @@ Given if and when are expressions, we can directly assign them to variables.
 
 ```kotlin
 val seasonFirstMonth = when(season) {
-    "summer" -> 6,
-    "winter" -> 12,
-    "automn" -> 9,
-    "spring" -> 3,
+    "summer" -> 6
+    "winter" -> 12
+    "automn" -> 9
+    "spring" -> 3
     else -> error("There is only 4 seasons")
 }
 ```
@@ -399,6 +400,21 @@ for (i in 1..10) {
     // Code to execute for each odd number between 1 and 10
 }
 ```
+
+### Labelled Break And Continue <a name="labelled-break-continue"></a>
+
+```kotlin
+outer@ while(condition) {
+      // code
+      inner@ while(condition) {
+            // code
+            if(break condition) {
+               break@outer //'break @outer' is also allowed. Similarly with 'continue'
+            } 
+      }
+}
+```
+
 ### Exceptions  <a name="exceptions"></a>
 
 To throw an exception object, use the throw expression:
