@@ -1347,6 +1347,9 @@ Kotlin has null safety, which helps prevent null pointer exceptions. Kotlin prov
     name?.let { println("The name is $it") }
     //If name is null you won’t see any output;
 
+    listOfNotNull("a", "b", null)  //[a, b]
+    listOf("a", "b", null)         //[a, b, null]
+
 ```  
 ### Equality <a name="equality"></a>
 
