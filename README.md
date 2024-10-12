@@ -44,6 +44,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Generic functions](#generic-functions)
   - [Lambda Expressions](#lambda-expressions)
   - [Extension Functions and Properties](#extension-functions-and-Properties)
+  - [Infix functions](#infix-functions)
   - [Higher-Order Functions](#higher-order-functions)
   - [Operator overloading](#operator-overloading)
   - [Variable number of arguments (varargs)](#varargs)
@@ -677,6 +678,14 @@ fun Any.printMe(): Unit = println("I am ${this}")
 1.printMe()
 "Hello".printMe()
 true.printMe()
+```
+
+### Infix functions <a name="infix-functions"></a>
+
+```kotlin
+infix fun Int.plus(that: Int) = this + that
+
+1 plus 1 //Outputs 2
 ```
 
 ### Higher-Order Functions <a name="higher-order-functions"></a>
