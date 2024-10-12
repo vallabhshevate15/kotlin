@@ -21,6 +21,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Type Conversion](#type-conversion)
   - [String templates](#string-templates)
   - [Multiline strings](#multiline-strings)
+  - [List or array to a string](#list-or-array-to-a-string)
   - [Character escape](#character-escape)
   - [Operators](#operators)
 - [Control Flow](#control-flow)
@@ -238,6 +239,24 @@ val result= "My name is $name"
 val speech = """Four score and
                |seven years ago
                |our fathers ...""".trimMargin()
+```
+
+### List or array to a String: <a name="list-or-array-to-a-string"></a>
+
+```kotlin
+val nums = listOf(1,2,3,4,5)
+
+nums.joinToString()
+// 1, 2, 3, 4, 5
+
+nums.joinToString(
+    separator = ", ",
+    prefix = "[",
+    postfix = "]",
+    limit = 3,
+    truncated = "there’s more ..."
+)
+//[1, 2, 3, there’s more ...]
 ```
 
 ### Character escape <a name="character-escape"></a>
