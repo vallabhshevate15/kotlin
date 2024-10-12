@@ -16,6 +16,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [KDoc](#kdoc)
   - [Variables](#variables)
   - [Data types](#data-types)
+  - [Sizes of Data types](#sizes-of-data-types)
   - [Type Inference](#type-inference)
   - [Type Conversion](#type-conversion)
   - [String templates](#string-templates)
@@ -171,6 +172,16 @@ Here's a brief overview of the most commonly used data types:
     val charVar: Char = 'A'
     val stringVar: String = "Hello, world!"
 ```
+### Sizes of Data types <a name="sizes-of-data-types"></a>
+
+| Data type | Bytes   |
+| --------- | ------- |
+| Short     | 2       |
+| Int       | 4       |
+| Long      | 8       |
+| Float     | 4       |
+| Double    | 8       |
+| Char      | 2       |
 
 ### Type Inference <a name="type-inference"></a>
 
