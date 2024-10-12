@@ -30,7 +30,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [While](#while)
   - [Do while](#do-while)
   - [Break and Continue](#break-and-continue)
-  - [Labelled Break And Continue](#labelled-break-continue)
+  - [Labelled Break And Continue](#labelled-break-and-continue)
   - [Exceptions](#exceptions)
 - [Functions](#functions)
   - [Function Declaration](#function-declaration)
@@ -401,7 +401,7 @@ for (i in 1..10) {
 }
 ```
 
-### Labelled Break And Continue <a name="labelled-break-continue"></a>
+### Labelled Break And Continue <a name="labelled-break-and-continue"></a>
 
 ```kotlin
 outer@ while(condition) {
