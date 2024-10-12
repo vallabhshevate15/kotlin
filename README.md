@@ -1325,6 +1325,8 @@ Kotlin has null safety, which helps prevent null pointer exceptions. Kotlin prov
     var nullableStr: String? = null
     var nonNullStr: String = "Hello"
 
+    nullableStr.length //error: only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type String?
+
     // safe call operator
     println(nullableStr?.length) // prints null
 
