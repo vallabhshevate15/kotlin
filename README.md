@@ -30,7 +30,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [While](#while)
   - [Do while](#do-while)
   - [Break and Continue](#break-and-continue)
-  - [Labelled Break And Continue](#labelled-break-and-continue)
+  - [Labelled Break And Continue](#labelled-break-continue)
   - [Exceptions](#exceptions)
 - [Functions](#functions)
   - [Function Declaration](#function-declaration)
