@@ -371,6 +371,52 @@ val seasonFirstMonth = when(season) {
 }
 ```
 
+When allows multiple branch conditions:
+
+```kotlin
+when (i) {
+    1,2,3 -> println("got a 1, 2, or 3")
+    4,5,6 -> println("got a 4, 5, or 6")
+    else  -> println("something else")
+}
+```
+
+When against ranges:
+```kotlin
+val i = 1
+
+when (i) {
+    in 1..3  -> println("1, 2, or 3")
+    !in 4..5 -> println("not a 4 or 5")
+    else     -> println("something else")
+}
+
+// result: 1, 2, or 3
+```
+
+When with in and listOf():
+```kotlin
+val i = 1
+when (i) {
+    in listOf(1,3,5) -> println("a little odd")
+    in listOf(2,4,6) -> println("a little even")
+    else             -> println("something else")
+}
+```
+
+When with expressions as branch conditions:
+```kotlin
+val x: Any = 11.0
+
+when (x) {
+    is Boolean -> println("$x is a Boolean")
+    is Double  -> println("$x is a Double")
+    is String  -> println("$x is a String")
+    !is String -> println("$x is not a String")
+    else       -> println("$x is something else")
+}
+```
+
 Thus, it allows a similar ternary operator using a regular if.
 
 ```kotlin
