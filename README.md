@@ -94,7 +94,12 @@ This is an example of printing "Hello world" in Kotlin:
 fun main() {
     println("Hello world")
 }
+
+fun main(args: Array<String>) {
+    println("Hello, world")
+}
 ```
+
 ### Get input from user  <a name="get-input-from-user"></a>
 To get input from the user in Kotlin, you can use the readLine() function.
 This is an example:
@@ -183,6 +188,7 @@ var z: Double // Valid, z has no initial value
 // println(z) // Invalid, z is not initialized and has no value yet
 z = 3.14 // Valid, z is initialized with a value
 ```
+
 ### Type Conversion <a name="type-conversion"></a>
 
 Kotlin provides several methods for converting between data types. Here's an example in Kotlin that demonstrates various methods of type conversion.
