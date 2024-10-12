@@ -669,6 +669,16 @@ fun main() {
 }
 
 ```
+
+Extension function on `Any`
+```kotlin
+fun Any.printMe(): Unit = println("I am ${this}")
+
+1.printMe()
+"Hello".printMe()
+true.printMe()
+```
+
 ### Higher-Order Functions <a name="higher-order-functions"></a>
 
 A higher-order function is a function that takes another function as parameter and/or returns a function.
