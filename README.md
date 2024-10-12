@@ -46,7 +46,6 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Extension Functions and Properties](#extension-functions-and-Properties)
   - [Higher-Order Functions](#higher-order-functions)
   - [Operator overloading](#operator-overloading)
-  - [Variable number of arguments (varargs)](#varargs)
   - [Infix notation](#infix-notation)
   - [Vararg Parameters](#vararg-parameters)
   - [Scope Functions](#scope-functions)
@@ -738,25 +737,6 @@ fun main() {
 }
 
 ```
-
-### Variable number of arguments (varargs) <a name="varargs"></a>
-
- Varargs is a feature that allows you to pass a variable number of arguments of the same type to a function
- 
-```kotlin
-fun printNumbers(vararg numbers: Int) {
-    for (number in numbers) {
-        println(number)
-    }
-}
-
-fun main() {
-    printNumbers(1, 2, 3) // prints 1, 2, 3
-    printNumbers(4, 5, 6, 7, 8) // prints 4, 5, 6, 7, 8
-}
-
-```
-
 ### Infix notation <a name="infix-notation"></a>
 
 Infix in Kotlin allows you to define functions that can be called using infix notation (i.e., without using parentheses and the dot notation).
