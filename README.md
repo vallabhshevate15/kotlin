@@ -60,6 +60,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Getters and setters](#getters-and-setters)
   - [Visibility modifiers](#visibility-modifiers)
   - [Late-initialized properties and variables](#late-initialized-properties-and-variables)
+  - [Imports and Packages](#imports-and-packages)
   - [Inheritance](#inheritance)
   - [Interface and Abstract Class](#interface-and-abstract-class)
   - [Abstraction](#abstraction)
@@ -1113,6 +1114,48 @@ myLateInitVar = "Hello World"
 
 // Now we can access the variable without an exception
 println(myLateInitVar) // Prints "Hello World"
+```
+
+### Imports and Packages <a name="imports-and-packages"></a>
+
+- Package statements are just like Java, but they don’t have to match the directory the file is in.
+- Files don’t have to contain class declarations
+
+```kotlin
+package foo.bar
+
+fun plus1(i: Int) = i + 1
+fun double(i: Int) = i * 2
+```
+
+```kotlin
+import foo.bar.plus1
+```
+
+- No “import static”
+
+```kotlin
+import java.lang.Math.PI
+PI
+//3.141592653589793
+
+import java.lang.Math.pow
+pow(2.0, 2.0)
+//4.0
+```
+
+- Renaming a class when you import it
+
+```kotlin
+import java.util.HashMap as JavaHashMap
+
+val map = JavaHashMap<String, String>();
+
+map.put("first_name", "Alvin")
+//null
+
+map
+//{first_name=Alvin}
 ```
 
 ### Inheritance <a name="inheritance"></a>
