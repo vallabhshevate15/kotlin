@@ -1099,6 +1099,16 @@ fun main() {
 }
 ```
 
+Constructor initialization:
+
+```kotlin
+class Person (name: String) {
+    init {
+        println("Person instance created")
+    }
+}
+```
+
 ### Late-initialized properties and variables <a name="late-initialized-properties-and-variables"></a>
 
 A lateinit variable is used when you know that a variable will be initialized before it is used, but you don't want to assign an initial value at the time of declaration.
