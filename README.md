@@ -59,6 +59,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Property and methods](#property-and-methods)
   - [Getters and setters](#getters-and-setters)
   - [Visibility modifiers](#visibility-modifiers)
+  - [Secondary Constructors](#secondary-constructors)
   - [Late-initialized properties and variables](#late-initialized-properties-and-variables)
   - [Imports and Packages](#imports-and-packages)
   - [Inheritance](#inheritance)
@@ -1109,7 +1110,27 @@ class Person (name: String) {
 }
 ```
 
-Constructor can have default values and named arguments can be passed while calling them.
+- Constructor can have default values and named arguments can be passed while calling them.
+
+### Secondary constructors <a name="secondary-constructors"></a>
+
+```kotlin
+class Pizza constructor (
+    var crustSize: String,
+    var crustType: String,
+    val toppings: MutableList<String> = mutableListOf()
+) {
+
+    // secondary constructor (no-args)
+    constructor() : this("SMALL", "THIN")
+
+    // secondary constructor (2-args)
+    constructor(crustSize: String, crustType: String) : this(crustSize, crustType, mutableListOf<String>())
+
+    override fun toString(): String = "size: ${crustSize}, type: ${crustType}, toppings: ${toppings}"
+
+}
+```
 
 ### Late-initialized properties and variables <a name="late-initialized-properties-and-variables"></a>
 
