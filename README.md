@@ -1042,6 +1042,61 @@ For more details about properties, getter/setter, backing fields, backing proper
 - internal: restricts visibility to the same module.
 - public: allows visibility from anywhere.
 
+```kotlin
+open class VisibilityDemo {
+    private val privateVal = "Private"
+    protected open val protectedVal = "Protected"
+    internal val internalVal = "Internal"
+    val publicVal = "Public"  // public by default
+
+    protected open fun protectedFunction() {
+        println(protectedVal)
+    }
+
+    internal fun internalFunction() {
+        println(internalVal)
+    }
+
+    fun publicFunction() {
+        println(publicVal)
+    }
+}
+
+class SubVisibilityDemo : VisibilityDemo() {
+    override val protectedVal = "Overridden Protected"
+
+    override fun protectedFunction() {
+        println(protectedVal)
+    }
+}
+
+fun main() {
+    val demo = VisibilityDemo()
+    val subDemo = SubVisibilityDemo()
+
+    // println(demo.privateVal) // Error: Cannot access 'privateVal': it is private in 'VisibilityDemo'
+    // println(demo.protectedVal) // Error: Cannot access 'protectedVal': it is protected in 'VisibilityDemo'
+    println(demo.internalVal)  // Accessible within the same module
+    println(demo.publicVal)  // Accessible everywhere
+
+    demo.publicFunction()
+    subDemo.protectedFunction()  // Accessible in subclass
+}
+```
+
+Constructors and Visibility:
+By default, constructors in Kotlin are public. However, you can modify the visibility of constructors using the constructor keyword.
+
+```kotlin
+class CustomConstructor private constructor(val a: Int) {
+    // This constructor is private
+}
+
+fun main() {
+    // val instance = CustomConstructor(1) // Error: Cannot access 'CustomConstructor': it is private in 'CustomConstructor'
+}
+```
+
 ### Late-initialized properties and variables <a name="late-initialized-properties-and-variables"></a>
 
 A lateinit variable is used when you know that a variable will be initialized before it is used, but you don't want to assign an initial value at the time of declaration.
