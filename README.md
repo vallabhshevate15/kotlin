@@ -1275,7 +1275,7 @@ class MyClass {
 ```
 
 ### Data class <a name="data-class"></a>
-A data class is a special class that is designed to hold data.
+A data class is a special class that is designed to hold data. toString(), equals() and hashCode() methods are provided by default using constructor parameters.
 
 ```kotlin
 data class Person(val name: String, var age: Int)
