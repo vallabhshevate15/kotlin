@@ -849,6 +849,8 @@ An array is a fixed-size collection of elements of the same data type.
 
 // Declare an array of integers
 val numbers = arrayOf(1, 2, 3, 4, 5)
+val x: Array<Int> = arrayOf(1,2,3)
+val c: IntArray = intArrayOf(1,2,3) // Note: arrayOf(1,2,3) and intArrayOf(1,2,3) are not the same:
 
 // Declare an array of strings
 val names = arrayOf("Alice", "Bob", "Charlie", "Dave")
