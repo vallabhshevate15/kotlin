@@ -651,6 +651,21 @@ fun <T> function(item: T){
 val sum = { a: Int, b: Int -> a + b }
 
 val square: (Int) -> Int = { it * it }
+
+//lambda functions used as class extensions:
+val lambda4 : String.(Int) -> String = { this + it }
+
+fun main(args: Array<String>) {
+    val result = "Geeks".lambda4(50)
+    print(result)
+}
+
+val find = fun(num: Int): String {
+    if(num % 2 == 0 && num < 0) {
+        return "Number is even and negative"
+    }
+}
+
 ```
 ### Extension Functions and Properties <a name="extension-functions-and-Properties"></a>
 Extension Functions and Properties in Kotlin allow adding new functionality or properties to existing classes without modifying their source code.
