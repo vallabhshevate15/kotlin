@@ -244,7 +244,7 @@ val speech = """Four score and
                |our fathers ...""".trimMargin()
 ```
 
-### List or array to a String: <a name="list-or-array-to-a-string"></a>
+### List or array to a String <a name="list-or-array-to-a-string"></a>
 
 ```kotlin
 val nums = listOf(1,2,3,4,5)
