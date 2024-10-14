@@ -1167,6 +1167,12 @@ class Pizza constructor (
     // secondary constructor (2-args)
     constructor(crustSize: String, crustType: String) : this(crustSize, crustType, mutableListOf<String>())
 
+    //secondary constructor with body
+    constructor(a: Int, b:Int) {
+        var c = a + b
+        println("The sum of numbers 5 and 6 is: ${c}")
+    }
+
     override fun toString(): String = "size: ${crustSize}, type: ${crustType}, toppings: ${toppings}"
 
 }
