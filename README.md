@@ -940,6 +940,10 @@ val index = numbers.indexOf(3)
 numbers.sort()
 
 names.reverse()
+
+println(names.size)
+
+
 ```
 
 ### List <a name="list"></a>
