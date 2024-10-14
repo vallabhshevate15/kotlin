@@ -657,10 +657,13 @@ val lambda4 : String.(Int) -> String = { this + it }
 
 fun main(args: Array<String>) {
     val result = "Geeks".lambda4(50)
-    print(result)
+    print(result) //Geeks50
 }
 
-val find = fun(num: Int): String {
+//Below are anonymous functions
+val anonymous1 = fun(x: Int, y: Int): Int = x + y
+
+val anonymous2 = fun(num: Int): String {
     if(num % 2 == 0 && num < 0) {
         return "Number is even and negative"
     }
