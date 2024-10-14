@@ -961,6 +961,10 @@ Basic methods:
 ```kotlin
 val map = mapOf(1 to "one", 2 to "two", 3 to "three")
 val map2= mutableListOf(1 to "one", 2 to "two", 3 to "three")
+
+for ((k,v) in map) {
+     println("value of $k is $v")
+}
 ```
 
 Basic methods:
@@ -986,7 +990,7 @@ Basic methods:
 
 ```kotlin
 val set = setOf(1, 2, 3, 4, 5)
-val set2=mutableSetOf(1, 2, 3, 4, 5)
+val set2 = mutableSetOf(1, 2, 3, 4, 5)
 ```
 
 Basic methods:
