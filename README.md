@@ -1173,6 +1173,11 @@ class Pizza constructor (
         println("The sum of numbers 5 and 6 is: ${c}")
     }
 
+    //secondary constructor with this() call first
+    constructor(a: Int) : this(a, 7) {
+        println("Final constructor") //The constructor which is defined above this constructor will be called first.
+    }
+
     override fun toString(): String = "size: ${crustSize}, type: ${crustType}, toppings: ${toppings}"
 
 }
