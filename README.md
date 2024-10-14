@@ -1408,7 +1408,7 @@ println(myLazyVar) // Prints "Hello World"
 
 ## Android <a name="android"></a>
 
-Here's an example of kotlin with android:
+Here's an example of kotlin with android (which is also an example of trailing lambda or function parameter):
 
 ```kotlin
 fab.setOnClickListener(object : View.OnClickListener {
