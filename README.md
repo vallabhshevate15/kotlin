@@ -935,7 +935,8 @@ names.reverse()
 
 ```kotlin
 val list = listOf(1, 2, 3, 4, 5)
-val list2=mutableListOf(1, 2, 3, 4, 5)
+val list4 = arrayListOf(1, 2, 3)
+val list2 = mutableListOf(1, 2, 3, 4, 5)
 ```
 Basic methods:
 ```kotlin
