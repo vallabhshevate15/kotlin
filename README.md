@@ -75,6 +75,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Generics](#generics)
   - [Delegation Pattern](#delegation-pattern)
   - [Delegated properties](#delegated-properties)
+- [Android](#android)
 - [Other Topics](#other-topics)
   - [Destructuring declarations](#destructuring-declarations)
   - [Reflection](#reflection)
@@ -1403,6 +1404,23 @@ val myLazyVar: String by lazy {
 }
 // The variable is not initialized until it is first accessed
 println(myLazyVar) // Prints "Hello World"
+```
+
+## Android <a name="android"></a>
+
+Here's an example of kotlin with android:
+
+```kotlin
+fab.setOnClickListener(object : View.OnClickListener {
+    override fun onClick(view: View) {
+        save("Note1.txt")
+    }
+})
+
+//The above code can be written as
+
+fab.setOnClickListener { save("Note1.txt") }
+
 ```
 
 ## Other Topics <a name="other-topics"></a>
