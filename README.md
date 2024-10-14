@@ -897,10 +897,20 @@ for (i in names.indices) {
     println("${i}: ${names[i]}")
 }
 
+for ((index, value) in array.withIndex()) {
+    println("the element at $index is $value")
+}
+
 // Iterate over an array using a forEach loop
 names.forEach { name ->
     println(name)
 }
+
+collection.forEachIndexed { index, element ->
+    // ...
+}
+
+
 ```
 
 - Basic methods
