@@ -1081,6 +1081,35 @@ Basic methods:
     numbers.containsKey("two") // Returns true if the map contains the specified key
 ```
 
+- mutableMapOf() properties
+
+| Properties                                                       | Description                                                                                                        |
+|------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
+| abstract val entries: MutableSet&lt;MutableEntry&lt;K, V&gt;&gt; | This returns a MutableSet of all its key and value pairs in the map.                                               |
+| abstract val keys: MutableSet&lt;K&gt;                           | This returns all the keys of MutableSet in this map.                                                               |
+| abstract val values: MutableCollection&lt;V&gt;                  | This returns all the values of MutableCollection in the current map. This collection may contain duplicate values. |
+
+- mutableMapOf functions
+
+| Function                                                                       | Description                                                                                                                             |
+|--------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------|
+| abstract fun put(key: K, value: V): V?                                         | It adds the given value with the specified key in the map.                                                                              |
+| abstract fun putAll(from: Map&lt;out K, V&gt;)                                 | This updates the current map with key/value pairs from the mentioned map.                                                               |
+| abstract fun remove(key: K): V?                                                | It removes the specified key with its corresponding value from the map.                                                                 |
+| open fun remove(key: K, value: V): Boolean                                     | It removes the key and value entities from the map only if it exist in the map.                                                         |
+| abstract fun clear()                                                           | This function is used to removes all the elements from the map.                                                                         |
+| operator fun &lt;K, V&gt; Map&lt;out K, V&gt;.contains(key: K): Boolean        | It checks the given key in the map.                                                                                                     |
+| abstract fun containsKey(key: K): Boolean                                      | It returns the true if map contains the specified key.                                                                                  |
+| fun &lt;K&gt; Map&lt;out K, *&gt;.containsKey(key: K): Boolean                 | It returns the true if map contains the specified key.                                                                                  |
+| abstract fun containsValue(value: V): Boolean                                  | It returns true if the map maps one or more keys for the given value.                                                                   |
+| fun &lt;K, V&gt; Map&lt;K, V&gt;.containsValue(value: V): Boolean              | It returns true if the map maps one or more keys for the given value.                                                                   |
+| fun &lt;K, V&gt; Map&lt;out K, V&gt;.count(): Int                              | It returns the total number of entities of the map                                                                                      |
+| operator fun &lt;K, V&gt; Map&lt;out K, V&gt;.get(key: K): V?                  | It returns the value corresponding to mention key, or null if no such key found in the map.                                             |
+| fun &lt;K, V&gt; Map&lt;out K, V&gt;.getOrDefault(key: K,defaultValue: V): V   | It returns the value with corresponding mention key, or it returns default value if no such mapping for the key in the map.             |
+| fun &lt;K, V&gt; Map&lt;K, V&gt;.getOrElse(key: K,defaultValue: () -&gt; V): V | It returns the value for the mention key in the map, or it returns the default value function if no such entry found for the given key. |
+| fun &lt;K, V&gt; Map&lt;K, V&gt;.getValue(key: K): V                           | It returns the value corresponding to given key, or it throws an exception if no key found in the map.                                  |
+
+
 ### Set <a name="set"></a>
 
 - A collection of elements with no duplicates
