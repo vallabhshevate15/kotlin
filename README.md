@@ -863,17 +863,15 @@ message?.also {
 
 String properties:
 
-```kotlin
 | Property          | Description                                                                  |
 |-------------------|------------------------------------------------------------------------------|
 | length: Int       | It returns the length of string sequence.                                    |
 | indices: IntRange | It returns the ranges of valid character indices from current char sequence. |
 | lastIndex: Int    | It returns the index of last character from char sequence.                   |
-```
+
 
 String methods/functions:
 
-```kotlin
 | Functions                                                                              | Description                                                                                                                                                |
 |----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | compareTo(other: String): Int                                                          | It compares the current object with specified object for order. It returns zero if current is equals to specified other object.                            |
@@ -892,7 +890,6 @@ String methods/functions:
 | CharSequence.getOrElse(index: Int, defaultValue: (Int) -&gt;Char): Char                | It returns the character at specified index or the result of calling the defaultValue function if the index is out of bound of current character sequence. |
 | CharSequence.getOrNull(index: Int): Char?                                              | It returns a character at the given index or returns null if the index is out of bound from character sequence.                                            |
 
-```
 
 ### Array <a name="array"></a>
 
