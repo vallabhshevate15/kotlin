@@ -1002,6 +1002,20 @@ Basic methods:
     numbers[1] // Returns the element at the specified index in the list
 ```
 
+| Functions                                                        | Descriptions                                                                                                                        |
+|------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| abstract fun contains(element: E): Boolean                       | It checks specified element is contained in this collection.                                                                        |
+| abstract fun containsAll(elements: Collection&lt;E&gt;): Boolean | It checks all elements specified are contained in this collection.                                                                  |
+| abstract operator fun get(index: Int): E                         | It returns the element at given index from the list.                                                                                |
+| abstract fun indexOf(element: E): Int                            | Returns the index of first occurrence of specified element in the list, or -1 if specified element is not present in list.          |
+| abstract fun isEmpty(): Boolean                                  | It returns the true if list is empty, otherwise false.                                                                              |
+| abstract fun iterator(): Iterator&lt;E&gt;                       | It returns an iterator over the elements of this list.                                                                              |
+| abstract fun lastIndexOf(element: E): Int                        | It returns the index of last occurrence of specified element in the list, or return -1 if specified element is not present in list. |
+| abstract fun listIterator(): ListIterator&lt;E&gt;               | It returns a list iterator over the elements in proper sequence in current list.                                                    |
+| abstract fun listIterator(index: Int): ListIterator&lt;E&gt;     | It returns a list iterator over the elements in proper sequence in current list, starting at specified index.                       |
+| abstract fun subList(fromIndex: Int, toIndex: Int): List         | It returns a part of list between fromIndex (inclusive) to toIndex (exclusive).                                                     |
+
+
 ### Map <a name="map"></a>
 
 - A collection of key-value pairs
