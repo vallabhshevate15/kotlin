@@ -55,6 +55,7 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [List](#list)
   - [Map](#map)
   - [Set](#set)  
+  - [Collections functions](#collections-functions)
 - [Classes and objects](#class-and-object)
   - [Classes](#classes)
   - [Property and methods](#property-and-methods)
@@ -1109,7 +1110,6 @@ Basic methods:
 | fun &lt;K, V&gt; Map&lt;K, V&gt;.getOrElse(key: K,defaultValue: () -&gt; V): V | It returns the value for the mention key in the map, or it returns the default value function if no such entry found for the given key. |
 | fun &lt;K, V&gt; Map&lt;K, V&gt;.getValue(key: K): V                           | It returns the value corresponding to given key, or it throws an exception if no key found in the map.                                  |
 
-
 ### Set <a name="set"></a>
 
 - A collection of elements with no duplicates
@@ -1136,6 +1136,28 @@ Basic methods:
     numbers.contains(1) //  Returns true if the set contains the specified element
 ```
 Please for more collections and detaile read doc.
+
+### Collections functions <a name="collections-functions"></a>
+
+- Remove duplicates
+
+```kotlin
+// Maintain the original order of items
+val devs = arrayOf("Amit", "Ali", "Amit", "Sumit", "Sumit", "Himanshu")
+print(devs.distinct()) // [Amit, Ali, Sumit, Himanshu]
+
+// Maintain the original order of items
+val devs = arrayOf("Amit", "Ali", "Amit", "Sumit", "Sumit", "Himanshu")
+print(devs.toSet()) // [Amit, Ali, Sumit, Himanshu]
+
+// Maintain the original order of items
+val devs = arrayOf("Amit", "Ali", "Amit", "Sumit", "Sumit", "Himanshu")
+print(devs.toMutableSet()) // [Amit, Ali, Sumit, Himanshu]
+
+// DO NOT Maintain the original order of items
+val devs = arrayOf("Amit", "Ali", "Amit", "Sumit", "Sumit", "Himanshu")
+print(devs.toHashSet()) // [Amit, Ali, Sumit, Himanshu]
+```
 
 ## Class and Object <a name="class-and-object"></a>
 
