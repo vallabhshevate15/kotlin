@@ -1032,6 +1032,25 @@ Basic methods:
 | abstract operator fun set(index: Int, element: E): E                    | It replaces the element and add new at given index with specified element.                                                                                                                                                                        |
 | abstract fun subList(fromIndex: Int,toIndex: Int): MutableList&lt;E&gt; | It returns part of list from specified fromIndex (inclusive) to toIndex (exclusive) from current list. The returned list is backed by current list, so non-structural changes in the returned list are reflected in current list, and vice-versa. |
 
+- Kotlin ArrayList functions
+
+| Function                                                            | Description                                                                                                                                           |
+|---------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| open fun add(element: E): Boolean                                   | It is used to add the specific element into the collection.                                                                                           |
+| open fun add(index: Int, element: E)                                | It is used to insert an element at specific index.                                                                                                    |
+| open fun addAll(elements: Collection&lt;E&gt;): Boolean             | It is used to add all the elements in the specified collection to current collection.                                                                 |
+| open fun addAll(index: Int, elements: Collection&lt;E&gt;): Boolean | It is used to add all the elements of specified collection into the current list at the specified index.                                              |
+| open fun clear()                                                    | It is used to removes all elements from the collection.                                                                                               |
+| open fun get(index: Int): E                                         | It is used to return the element at specified index in the list.                                                                                      |
+| open fun indexOf(element: E): Int                                   | It is used to return the index of first occurrence of specified element in the list or return -1 if the specified element in not present in the list. |
+| open fun lastIndexOf(element: E): Int                               | It is used to return the last occurrence of given element from the list or it returns -1 if the given element is not present in the list.             |
+| open fun remove(element: E): Boolean                                | It is used to remove a single instance of the specific element from current collection, if it is available.                                           |
+| open fun removeAt(index: Int): E                                    | It is used to remove the specific index element from the list.                                                                                        |
+| open fun removeRange(startIndex: Int, endIndex: Int)                | Its remove the range of elements starting from startIndex to endIndex in which endIndex is not includes.                                              |
+| open fun set(index: Int, element: E): E                             | It is used to replaces the element from the specified position from current list with the specified element.                                          |
+| open fun toArray(): Array&lt;Any?&gt;                               | It is used to return new array of type Array&lt;Any?&gt; with the elements of this collection.                                                        |
+| open fun toString(): String                                         | It is used to returns a string representation of the object.                                                                                          |
+| fun trimToSize()                                                    | It does nothing in this ArrayList implementation.                                                                                                     |
 
 ### Map <a name="map"></a>
 
