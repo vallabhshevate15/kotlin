@@ -49,7 +49,8 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Infix notation](#infix-notation)
   - [Vararg Parameters](#vararg-parameters)
   - [Scope Functions](#scope-functions)
-- [Collections](#collections)  
+- [Collections](#collections)
+  - [String](#string)
   - [Array](#array)
   - [List](#list)
   - [Map](#map)
@@ -857,6 +858,41 @@ message?.also {
 ```
 
 ## Collections <a name="collections"></a>
+
+### String <a name="string"></a>
+
+String properties:
+
+```kotlin
+| Property          | Description                                                                  |
+|-------------------|------------------------------------------------------------------------------|
+| length: Int       | It returns the length of string sequence.                                    |
+| indices: IntRange | It returns the ranges of valid character indices from current char sequence. |
+| lastIndex: Int    | It returns the index of last character from char sequence.                   |
+```
+
+String methods/functions:
+
+```kotlin
+| Functions                                                                              | Description                                                                                                                                                |
+|----------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| compareTo(other: String): Int                                                          | It compares the current object with specified object for order. It returns zero if current is equals to specified other object.                            |
+| get(index: Int): Char                                                                  | It returns the character at given index from the current character sequence.                                                                               |
+| plus(other: Any?): String                                                              | It returns the concatenate string with the string representation of the given other string.                                                                |
+| subSequence(startIndex: Int,endIndex: Int): CharSequence                               | It returns the new character sequence from current character sequence, starting from startIndex to endIndex.                                               |
+| CharSequence.contains(other: CharSequence, ignoreCase: Boolean = false):Boolean        | It returns true if the character sequence contains the other specified character sequence.                                                                 |
+| CharSequence.count(): Int                                                              | It returns the length of char sequence.                                                                                                                    |
+| String.drop(n: Int): String                                                            | It returns a string after removing the first n character.                                                                                                  |
+| String.dropLast(n: Int): String                                                        | It returns a string after removing the last n character.                                                                                                   |
+| String.dropWhile(predicate: (Char) -&gt; Boolean): String                              | It returns a character sequence which contains all the characters, except first characters which satisfy the given predicate.                              |
+| CharSequence.elementAt(index: Int): Char                                               | It returns a character at the given index or throws an IndexOutOfBoundsException if the index does not exist in character sequence.                        |
+| CharSequence.indexOf(char: Char, startIndex: Int = 0,ignoreCase: Boolean = false): Int | It returns the index of first occurrence of the given character, starting from the given index value.                                                      |
+| CharSequence.indexOfFirst(predicate: (Char) -&gt; Boolean): Int                        | It returns the index of first character which match the given predicate, or -1 if the character sequence not contains any such character.                  |
+| CharSequence.indexOfLast(predicate: (Char) -&gt; Boolean): Int                         | It returns the index of last character which match the given predicate, or -1 if the character sequence not contains any such character.                   |
+| CharSequence.getOrElse(index: Int, defaultValue: (Int) -&gt;Char): Char                | It returns the character at specified index or the result of calling the defaultValue function if the index is out of bound of current character sequence. |
+| CharSequence.getOrNull(index: Int): Char?                                              | It returns a character at the given index or returns null if the index is out of bound from character sequence.                                            |
+
+```
 
 ### Array <a name="array"></a>
 
