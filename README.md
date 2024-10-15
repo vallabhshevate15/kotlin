@@ -1203,6 +1203,22 @@ val userWithId1 = users.find { it.id == 1 } //find returns first element or null
 print(userWithId1) // User(id=1, name=Amit)
 ```
 
+- Union of collections
+
+```kotlin
+val listOne = listOf(1, 2, 3, 3, 4, 5, 6)
+val listTwo = listOf(2, 2, 4, 5, 6, 7, 8)
+println(listOne.union(listTwo)) // [1, 2, 3, 4, 5, 6, 7, 8]
+```
+
+- Intersection of collections
+
+```kotlin
+val listOne = listOf(1, 2, 3, 3, 4, 5, 6)
+val listTwo = listOf(2, 2, 4, 5, 6, 7, 8)
+println(listOne.intersect(listTwo)) // [2, 4, 5, 6]
+```
+
 ## Class and Object <a name="class-and-object"></a>
 
 ### Classes <a name="classes"></a>
