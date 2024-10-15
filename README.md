@@ -1184,6 +1184,25 @@ val emptyList = emptyList<Int>()
 val allTrue4 = emptyList.all { false } // true as the list is empty
 ```
 
+- Find a particular element based on a certain condition
+
+```kotlin
+data class User(val id: Int, val name: String)
+
+val users = arrayOf(
+    User(1, "Amit"),
+    User(2, "Ali"),
+    User(3, "Sumit"),
+    User(4, "Himanshu")
+)
+
+val userWithId3 = users.single { it.id == 3 } //single returns first element or throws Exception if more than one or no matching element
+print(userWithId3) // User(id=3, name=Sumit)
+
+val userWithId1 = users.find { it.id == 1 } //find returns first element or null if not found
+print(userWithId1) // User(id=1, name=Amit)
+```
+
 ## Class and Object <a name="class-and-object"></a>
 
 ### Classes <a name="classes"></a>
