@@ -1182,6 +1182,12 @@ val allTrue2 = evens.all { isEven(it) } // true
 
 val emptyList = emptyList<Int>()
 val allTrue4 = emptyList.all { false } // true as the list is empty
+
+val numbers = listOf(1, 2, 3, 4, 5)
+val hasEvenNumber = numbers.any { it % 2 == 0 }
+val allEvenNumbers = numbers.all { it % 2 == 0 }
+// hasEvenNumber: true
+// allEvenNumbers: false
 ```
 
 - Find a particular element based on a certain condition
@@ -1222,7 +1228,15 @@ println(listOne.intersect(listTwo)) // [2, 4, 5, 6]
 - Aggregate functions:
 
 ```kotlin
+
 val numbers = listOf(1, 2, 3, 4, 5)
+val squaredNumbers = numbers.map { it * it }
+// squaredNumbers: [1, 4, 9, 16, 25]
+
+val names = listOf("Alice", "Bob", "Charlie", "David")
+val shortNames = names.filter { it.length <= 4 }
+// shortNames: ["Bob", "David"]
+
 val totalSum = numbers.sum()
 println("Total Sum: $totalSum") // Output: Total Sum: 15
 
@@ -1238,6 +1252,14 @@ println("Reduced Sum: $reducedSum") // Output: Reduced Sum: 15
 val maxValue = numbers.maxOrNull()
 val minValue = numbers.minOrNull()
 println("Max Value: $maxValue, Min Value: $minValue") // Output: Max Value: 5, Min Value: 1
+
+val nestedList = listOf(listOf(1, 2), listOf(3, 4), listOf(5, 6))
+val flatList = nestedList.flatMap { it }
+// flatList: [1, 2, 3, 4, 5, 6]
+
+val people = listOf(Person("Alice", 25), Person("Bob", 30), Person("Charlie", 35))
+val oldestPerson = people.maxBy { it.age } // similarly with minBy function
+// oldestPerson: Person(name=Charlie, age=35)
 ```
 
 ## Class and Object <a name="class-and-object"></a>
