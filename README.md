@@ -21,7 +21,6 @@ If there is any issue, please open an issue or feel free to contribute to its ex
   - [Type Conversion](#type-conversion)
   - [String templates](#string-templates)
   - [Multiline strings](#multiline-strings)
-  - [List or array to a string](#list-or-array-to-a-string)
   - [Character escape](#character-escape)
   - [Operators](#operators)
 - [Control Flow](#control-flow)
@@ -244,24 +243,6 @@ val result= "My name is $name"
 val speech = """Four score and
                |seven years ago
                |our fathers ...""".trimMargin()
-```
-
-### List or array to a String <a name="list-or-array-to-a-string"></a>
-
-```kotlin
-val nums = listOf(1,2,3,4,5)
-
-nums.joinToString()
-// 1, 2, 3, 4, 5
-
-nums.joinToString(
-    separator = ", ",
-    prefix = "[",
-    postfix = "]",
-    limit = 3,
-    truncated = "there’s more ..."
-)
-//[1, 2, 3, there’s more ...]
 ```
 
 ### Character escape <a name="character-escape"></a>
@@ -1157,6 +1138,50 @@ print(devs.toMutableSet()) // [Amit, Ali, Sumit, Himanshu]
 // DO NOT Maintain the original order of items
 val devs = arrayOf("Amit", "Ali", "Amit", "Sumit", "Sumit", "Himanshu")
 print(devs.toHashSet()) // [Amit, Ali, Sumit, Himanshu]
+```
+
+- Convert array or list to string
+
+```kotlin
+val nums = listOf(1,2,3,4,5)
+
+nums.joinToString()
+// 1, 2, 3, 4, 5
+
+nums.joinToString(
+    separator = ", ",
+    prefix = "[",
+    postfix = "]",
+    limit = 3,
+    truncated = "there’s more ..."
+)
+//[1, 2, 3, there’s more ...]
+```
+
+- Transform a collection into a single result
+
+```kotlin
+val numList = listOf(1, 2, 3, 4, 5)
+val result = numList.reduce { result, item ->
+    result + item
+}
+print(result) // 15
+
+// NOTE: If the list is empty, then it will throw a RuntimeException
+```
+
+Find all elements satisfying a particular condition
+
+```kotlin
+val isEven: (Int) -> Boolean = { it % 2 == 0 }
+val zeroToTen = 0..10
+val allTrue = zeroToTen.all { isEven(it) } // false
+
+val evens = zeroToTen.map { it * 2 }
+val allTrue2 = evens.all { isEven(it) } // true
+
+val emptyList = emptyList<Int>()
+val allTrue4 = emptyList.all { false } // true as the list is empty
 ```
 
 ## Class and Object <a name="class-and-object"></a>
