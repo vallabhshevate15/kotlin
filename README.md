@@ -1219,6 +1219,27 @@ val listTwo = listOf(2, 2, 4, 5, 6, 7, 8)
 println(listOne.intersect(listTwo)) // [2, 4, 5, 6]
 ```
 
+- Aggregate functions:
+
+```kotlin
+val numbers = listOf(1, 2, 3, 4, 5)
+val totalSum = numbers.sum()
+println("Total Sum: $totalSum") // Output: Total Sum: 15
+
+val averageValue = numbers.average()
+println("Average Value: $averageValue") // Output: Average Value: 3.0
+
+val foldedSum = numbers.fold(0) { acc, number -> acc + number }
+println("Folded Sum: $foldedSum") // Output: Folded Sum: 15
+
+val reducedSum = numbers.reduce { acc, number -> acc + number }
+println("Reduced Sum: $reducedSum") // Output: Reduced Sum: 15
+
+val maxValue = numbers.maxOrNull()
+val minValue = numbers.minOrNull()
+println("Max Value: $maxValue, Min Value: $minValue") // Output: Max Value: 5, Min Value: 1
+```
+
 ## Class and Object <a name="class-and-object"></a>
 
 ### Classes <a name="classes"></a>
